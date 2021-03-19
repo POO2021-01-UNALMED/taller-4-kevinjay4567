@@ -3,16 +3,14 @@ package classroom;
 public class Asignatura {
 
     String nombre;
-    String n = nombre;
     int codigoInterno;
     int codigoExterno;
 
     Asignatura() {
-        this("Sin nombre");
-        this(0);
+        this("Sin nombre",0,0);
     }
 
-    Asignatura(int codigoInterno) {
+    Asignatura(byte codigoInterno) {
         this("Sin nombre", codigoInterno, 0);
     }
 
@@ -30,18 +28,19 @@ public class Asignatura {
         this.codigoExterno = codigoExterno;
     }
 
+
     void cambiarDatos(int codigoInterno, int codigoExterno, String nombre) {
         this.codigoInterno = codigoInterno;
         this.codigoExterno = codigoExterno;
         this.nombre = nombre;
     }
 
-    void cambiarDatos(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }
-
     void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
+    }
+
+    void cambiarDatosInterno(int codigoInterno) {
+        this.codigoInterno = codigoInterno;
     }
 
     void cambiarDatos(String nombre) {
